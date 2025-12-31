@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rake & Roll | Leaf Removal</title>
+    <link rel="icon" href="https://www.clipartmax.com/png/middle/148-1484674_autumn-leaves-clipart-emoji-maple-leaf-silhouette-png.png">
+    <style>
+        /* CSS STYLES */
+        :root {
+            --primary-green: #5a8d2d;
+            --accent-orange: #e67e22;
+            --dark-text: #333;
+            --light-bg: #f9f9f9;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body {
+            line-height: 1.6;
+            color: var(--dark-text);
+            background-color: #fff;
+        }
+
+        /* Navigation */
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1rem 10%;
+            background: white;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .logo > a{
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: var(--primary-green);
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        nav ul {
+            display: flex;
+            list-style: none;
+            gap: 20px;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: var(--dark-text);
+            font-weight: 500;
+            transition: color 0.3s;
+        }
+
+        nav a:hover {
+            color: var(--primary-green);
+        }
+
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), 
+                        url('https://www.heraldnet.com/wp-content/uploads/2023/11/34370778_web1_M-smith-edh-231101.jpg');
+            background-size: cover;
+            background-position: center;
+            height: 60vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            color: white;
+            padding: 0 20px;
+        }
+
+        .hero h1 {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+        }
+
+        .cta-button {
+            background-color: var(--accent-orange);
+            color: white;
+            padding: 12px 30px;
+            text-decoration: none;
+            border-radius: 5px;
+            font-weight: bold;
+            transition: transform 0.2s;
+        }
+
+        .cta-button:hover {
+            transform: scale(1.05);
+        }
+
+        /* Features Section */
+        .services {
+            padding: 4rem 10%;
+            text-align: center;
+            background: var(--light-bg);
+        }
+
+        .service-card {
+            background: white;
+            padding: 2rem;
+            border-radius: 10px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+            max-width: 400px;
+            margin: 0 auto;
+        }
+
+        .service-icon {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+        }
+
+        /* Contact Form */
+        .contact {
+            padding: 4rem 10%;
+        }
+
+        .contact-container {
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        form {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+
+        input, textarea {
+            padding: 12px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+        }
+
+        button {
+            background-color: var(--primary-green);
+            color: white;
+            padding: 12px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-weight: bold;
+        }
+
+        footer {
+            background: #222;
+            color: white;
+            text-align: center;
+            padding: 2rem;
+            margin-top: 2rem;
+        }
+
+        /* Mobile Adjustments */
+        @media (max-width: 768px) {
+            .hero h1 { font-size: 2rem; }
+            nav ul { display: none; }
+        }
+    </style>
+</head>
+<body>
+
+    <nav>
+        <div class="logo">
+            <a href="#home">🍂 RAKE & ROLL</a>
+        </div>
+        <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#services">Services</a></li>
+            <li><a href="#contact">Get a Quote</a></li>
+        </ul>
+    </nav>
+
+    <section class="hero" id="home" style="user-select: none;">
+        <h1>Tired of leaves? We've got you covered.</h1>
+        <p style="margin-bottom: 2rem;">Residential leaf raking and removal services.</p>
+        <a href="#contact" class="cta-button">GET A FREE QUOTE</a>
+    </section>
+
+    <section class="services" id="services" style="user-select: none;">
+        <h2 style="margin-bottom: 2rem;">Our Specialized Service</h2>
+        <div class="service-card">
+            <div class="service-icon">🍃</div>
+            <h3>Premium Leaf Removal</h3>
+            <p>We don't just blow leaves around. We rake, bag, and haul them away, leaving your lawn pristine and healthy for the winter.</p>
+        </div>
+    </section>
+
+    <section class="contact" id="contact">
+        <div class="contact-container">
+            <h2 style="text-align: center; margin-bottom: 2rem; user-select: none;">Book Your Cleanup</h2>
+
+                <form action="https://formspree.io/f/mykyrkpn" method="POST" id="bookingForm">
+                    <input type="text" name="name" id="name" placeholder="Your Name" pattern="[A-Za-z\s'\-]+" title="Names should only contain letters"required>
+                    <input type="email" name="email" id="email" placeholder="Email Address" required>
+                    <input type="tel" name="phone" id="phoneNum" placeholder="Phone Number" pattern="[0-9\- \(\)\+]*" title="Please enter a valid phone number" required>
+                    <textarea name="message" id="message" rows="4" placeholder="Tell us about your yard (size, number of trees, etc.)"></textarea>
+                    <button type="submit">Submit Request</button>
+                </form>
+
+                <div id="successMessage" style="display:none; color: var(--primary-green); text-align: center; margin-top: 1rem; font-weight: bold;">
+                    Thank you! We'll contact you shortly with a quote.
+                </div>
+        </div>
+    </section>
+
+    <footer style="user-select: none;">
+        <p>&copy; <span id="year"></span> Rake & Roll Leaf Services. All rights reserved.</p>
+    </footer>
+
+    <script src="main.js"></script>
+
+</body>
+</html>
